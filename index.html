@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WUB Bus Route</title>
+	<meta charset="utf-8">
+	<meta name="viewpost" content="width=device-width,initial-scale=1.0">
+	<style type="text/css">
+
+     #card {
+     	padding:20px;
+     	background-color: gray;
+     	text-align: center;
+     	text-decoration: none;
+     }
+     #card{
+     	color: #fff;
+     	padding: 20px;
+     	background-color: cyan;
+     	box-shadow: 7px 8px 19px #222;
+     	height: 300px;
+     	width: 450px;
+
+     }
+
+     input#input_field{
+     	padding: 8px 30px;
+     	border: none;
+     	border-radius: 10px;
+     }
+
+      button.btn{
+      	 background-color: darkgoldenrod;
+      	 margin-top: 20px;
+      	 padding: 8px 26px;
+      	 box-shadow: 7px 8px 19px #222;
+      	 color: #fff;
+      }
+	</style>
+</head>
+<body>
+
+    <h2 style="text-align:left;color:cyan;"> WUB Bus Route </h2>
+    <div id="card">
+    	<h2 style="text-align: left;" >Search Your Location</h2>
+    	<h1 id="target"></h1>
+    	<p id="notFound" style="color: red;"></p>
+    	<input id="input_field" size="30" type="text" placeholder ="Enter Your Location Here..........."><br><br>
+    	 
+    	<button class="btn" onclick ="searchLocation()">Search</button>
+    </div>
+      <script type="text/javascript">
+      	class student{
+      		constructor(name,address){
+      			this.Name = name;
+      			this.Address = address;
+      			this.Info = function () {
+      				alert ("Hi" +this.Name+"Your Nearest Bus service stopage is"+ this.Address);
+
+      			};
+      		}
+      	}
+
+       var std1 = new student("Nazmul","Dhanmondi");
+       var std2 = new student("Sam","Jatrabari");
+       var std3 = new student("Nithin","Tongi");
+       var std4 = new student("Peter","Polashi");
+
+       var input_Field = document.getElementById('input_field')
+          function searchLocation() {
+
+          	inputField.setAttribute("value","default value")
+
+          	if (inputField.value == "Dhanmondi") {
+          		document.getElementsByTagId('target').innerHTML=std1.Info();
+          	}
+          	if (inputField.value == "Jatrabari") {
+          		document.getElementsByTagId('target').innerHTML=std2.Info();
+          	}
+          	if (inputField.value == "Tongi") {
+          		document.getElementsByTagId('target').innerHTML=std3.Info();
+          	}
+          	if (inputField.value == "Polashi") {
+          		document.getElementsByTagId('target').innerHTML=std4.Info();
+          	}
+          }
+          else{
+          	document.getElementById("notFound").innerHTML="Sorry!Bus stoppage not found "
+          }
+
+          
+
+      </script>
+	</body>
+	
+</html>
